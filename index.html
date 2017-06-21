@@ -15,12 +15,13 @@
   <body ng-controller="AlphaCtrl">
     <table>
       <tr>
-        <th>Country</th>
-        <th>Population</th>
+        <th>Enter Name:</th>
+        <th><input ng-model="name" type="text"/></th>
       </tr>
       <tr ng-repeat="country in countries">
         <td>{{country.alphabet}}</td>
         <td>{{country.value}}</td>
       </tr>
+      {{countries['A']}}
     </table>
   </body>
