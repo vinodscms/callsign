@@ -8,7 +8,7 @@
       var alphaApp = angular.module('alphaApp', []);
       alphaApp.controller('AlphaCtrl', ['$scope', '$http', function (scope, http){
         http.get('alpha.json').success(function(data) {
-          $scope.countries = data;
+          scope.countries = data;
         });
       }]);
     </script>
@@ -16,7 +16,7 @@
   <body ng-controller="AlphaCtrl">
     <table>
       <tr>
-        <th>Enter Name:</th>
+        <th>Enter Name here:</th>
         <th><input ng-model="name" type="text"/></th>
       </tr>
       <tr ng-repeat="country in countries">
