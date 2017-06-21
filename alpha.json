@@ -1,27 +1,106 @@
-{
-  "A": "Alfa",
-  "B": "Bravo",
-  "C": "Charlie",
-  "D": "Delta",
-  "E": "Echo",
-  "F": "Foxtrot",
-  "G": "Golf",
-  "H": "Hotel",
-  "I": "India",
-  "J": "Juliett",
-  "K": "Kilo",
-  "L": "Lima",
-  "M": "Mike",
-  "N": "November",
-  "O": "Oscar",
-  "P": "Papa",
-  "Q": "Quebec",
-  "R": "Romeo",
-  "S": "Sierra",
-  "T": "Tango",
-  "U": "Uniform",
-  "V": "Victor",
-  "W": "Whiskey",
-  "X": "X-ray",
-  "Y": "Yankee"
-}
+[
+  {
+    "alphabet": "A",
+    "value": "Alfa"
+  },
+  {
+    "alphabet": "B",
+    "value": "Bravo"
+  },
+  {
+    "alphabet": "C",
+    "value": "Charlie"
+  },
+  {
+    "alphabet": "D",
+    "value": "Delta"
+  },
+  {
+    "alphabet": "E",
+    "value": "Echo"
+  },
+  {
+    "alphabet": "F",
+    "value": "Foxtrot"
+  },
+  {
+    "alphabet": "G",
+    "value": "Golf"
+  },
+  {
+    "alphabet": "H",
+    "value": "Hotel"
+  },
+  {
+    "alphabet": "I",
+    "value": "India"
+  },
+  {
+    "alphabet": "J",
+    "value": "Juliet"
+  },
+  {
+    "alphabet": "K",
+    "value": "Kilo"
+  },
+  {
+    "alphabet": "L",
+    "value": "Lima"
+  },
+  {
+    "alphabet": "M",
+    "value": "Mike"
+  },
+  {
+    "alphabet": "N",
+    "value": "November"
+  },
+  {
+    "alphabet": "O",
+    "value": "Oscar"
+  },
+  {
+    "alphabet": "P",
+    "value": "Papa"
+  },
+  {
+    "alphabet": "Q",
+    "value": "Quebec"
+  },
+  {
+    "alphabet": "R",
+    "value": "Romeo"
+  },
+  {
+    "alphabet": "S",
+    "value": "Sierra"
+  },
+  {
+    "alphabet": "T",
+    "value": "Tango"
+  },
+  {
+    "alphabet": "U",
+    "value": "Uniform"
+  },
+  {
+    "alphabet": "V",
+    "value": "Victor"
+  },
+  {
+    "alphabet": "W",
+    "value": "Whiskey"
+  },
+  {
+    "alphabet": "X",
+    "value": "X-Ray"
+  },
+  {
+    "alphabet": "Y",
+    "value": "Yankee"
+  },
+  {
+    "alphabet": "Z",
+    "value": "Zulu"
+  }
+]
