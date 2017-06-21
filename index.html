@@ -7,7 +7,7 @@
       var myApp = angular.module('alphaApp', []);
       alphaApp.controller('AlphaCtrl', function ($scope, $http){
         $http.get('alpha.json').success(function(data) {
-          $scope.countries = data;
+          $scope.values = data;
         });
       });
     </script>
@@ -18,9 +18,9 @@
         <th>Country</th>
         <th>Population</th>
       </tr>
-      <tr ng-repeat="country in countries">
-        <td>{{country.name}}</td>
-        <td>{{country.population}}</td>
+      <tr ng-repeat="alphabets in values">
+        <td>{{alphabets.alphabet}}</td>
+        <td>{{alphabets.value}}</td>
       </tr>
     </table>
   </body>
