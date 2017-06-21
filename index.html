@@ -1,18 +1,18 @@
-<html ng-app="countryApp">
+<html ng-app="alphaApp">
   <head>
     <meta charset="utf-8">
     <title>Call Sign</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
     <script>
-      var countryApp = angular.module('countryApp', []);
-      countryApp.controller('CountryCtrl', function ($scope, $http){
+      var alphaApp = angular.module('alphaApp', []);
+      alphaApp.controller('AlphaCtrl', function ($scope, $http){
         $http.get('alpha.json').success(function(data) {
           $scope.countries = data;
         });
       });
     </script>
   </head>
-  <body ng-controller="CountryCtrl">
+  <body ng-controller="AlphaCtrl">
     <table>
       <tr>
         <th>Country</th>
