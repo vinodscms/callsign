@@ -9,7 +9,7 @@
         $http.get('alpha.json').success(function(data) {
           $scope.countries = data;
           
-          $scope.name=$scope.countries[A];
+          $scope.name=$scope.countries['A'];
         });
       });
     </script>
