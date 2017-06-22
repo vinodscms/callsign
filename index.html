@@ -17,9 +17,8 @@
             {
                 var c = scope.name.charAt(i);
                 console.log(scope.getValue(c));
-                scope.temp = scope.temp + scope.getValue(c);
-                //scope.callSign = scope.getValue(c);
-            }
+                scope.temp = scope.temp + "  " + scope.getValue(c);
+             }
         };
         scope.display=function(){
           scope.callSign = scope.temp;
@@ -43,9 +42,6 @@
       <tr>
         {{callSign}}
       </tr> 
-      <tr ng-repeat="country in countries">
-        <td>{{country.alphabet}}</td>
-        <td>{{country.value}}</td>
-      </tr>
+
     </table>
   </body>
