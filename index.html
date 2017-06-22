@@ -16,9 +16,10 @@
           for (var i = 0; i < scope.name.length; i++)
             {
                 var c = scope.name.charAt(i);
-                console.log(scope.getValue(c));
-                scope.temp = scope.temp + "  " + scope.getValue(c);
-             }
+                if(scope.getValue(c)) {
+                  scope.temp = scope.temp + "  " + scope.getValue(c);
+                }
+            }
         };
         scope.display=function(){
           scope.callSign = scope.temp;
@@ -40,7 +41,9 @@
         <th><input ng-model="name" ng-change="myFunc();display()" type="text"/></th>
       </tr>
       <tr>
-        {{callSign}}
+        <td>
+          {{callSign}}
+        </td>
       </tr> 
 
     </table>
