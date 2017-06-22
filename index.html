@@ -16,8 +16,16 @@
           for (var i = 0; i < scope.name.length; i++)
             {
                 var c = scope.name.charAt(i);
-                console.log(scope.countries[i]);
+                //console.log(scope.countries[i]);
+                console.log(scope.getValue(c));
             }
+        };
+        scope.getValue = function(c) {
+          for(var i=0;i<scope.countries.length;i++){
+            if(scope.countries[i].alphabet==c){
+              return scope.countries[i].value;
+               }
+          }
         };
       }]);
     </script>
