@@ -4,23 +4,43 @@
     <title>Call Sign</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
     <script>
+    
       var alphaApp = angular.module('alphaApp', []);
-      alphaApp.controller('AlphaCtrl', function ($scope, $http){
-        $http.get('alpha.json').success(function(data) {
-          $scope.countries = data;
+      alphaApp.controller('AlphaCtrl', ['$scope', '$http', function (scope, http){
+        http.get('alpha.json').success(function(data) {
+          scope.countries = data;
         });
-      });
+        scope.temp = "";
+        scope.myFunc = function() {
+          scope.temp = "";
+          for (var i = 0; i < scope.name.length; i++)
+            {
+                var c = scope.name.charAt(i);
+                if(scope.getValue(c)) {
+                  scope.temp = scope.temp + "  " + scope.getValue(c);
+                }
+            }
+        };
+        scope.display=function(){
+          scope.callSign = scope.temp;
+        }
+        scope.getValue = function(c) {
+          for(var i=0;i<scope.countries.length;i++){
+            if(scope.countries[i].alphabet==c.toUpperCase()){
+              return scope.countries[i].value;
+               }
+          }
+        };
+      }]);
     </script>
   </head>
   <body ng-controller="AlphaCtrl">
     <table>
       <tr>
-        <th>Country</th>
-        <th>Population</th>
-      </tr>
-      <tr ng-repeat="country in countries">
-        <td>{{country.alphabet}}</td>
-        <td>{{country.value}}</td>
-      </tr>
+        <th>Enter Name:</th>
+        <th><input ng-model="name" ng-change="myFunc();display()" type="text"/></th>
+      </tr>       
     </table>
+    {{callSign}}
   </body>
+</html>
