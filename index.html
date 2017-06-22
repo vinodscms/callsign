@@ -10,15 +10,16 @@
         http.get('alpha.json').success(function(data) {
           scope.countries = data;
         });
-        scope.count = 0;
+        temp = "";
         scope.myFunc = function() {
-          scope.count++;
           for (var i = 0; i < scope.name.length; i++)
             {
                 var c = scope.name.charAt(i);
                 console.log(scope.getValue(c));
-              scope.callSign = scope.getValue(c);
+              temp = temp + scope.getValue(c);
+                //scope.callSign = scope.getValue(c);
             }
+          scope.callSign = temp;
         };
         scope.getValue = function(c) {
           for(var i=0;i<scope.countries.length;i++){
