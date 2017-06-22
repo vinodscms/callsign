@@ -10,16 +10,21 @@
         http.get('alpha.json').success(function(data) {
           scope.countries = data;
         });
-        scope.fry = "testing";
+        scope.myFunc = function() {
+          scope.count++;
+        };
       }]);
     </script>
   </head>
   <body ng-controller="AlphaCtrl">
     <table>
       <tr>
-        <th>Enter Name here{{fry}}:</th>
-        <th><input ng-model="name" type="text"/></th>
+        <th>Enter Name:</th>
+        <th><input ng-model="name" ng-change="myFunc()" type="text"/></th>
       </tr>
+      <tr>
+        <th>{{count}}</th>
+      </tr> 
       <tr ng-repeat="country in countries">
         <td>{{country.alphabet}}</td>
         <td>{{country.value}}</td>
