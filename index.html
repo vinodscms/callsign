@@ -10,8 +10,14 @@
         http.get('alpha.json').success(function(data) {
           scope.countries = data;
         });
+        scope.count = 0;
         scope.myFunc = function() {
           scope.count++;
+          for (var i = 0; i < scope.name.length; i++)
+            {
+                var c = str.charAt(i);
+                console.log(c);
+            }
         };
       }]);
     </script>
@@ -24,6 +30,7 @@
       </tr>
       <tr>
         <th>{{count}}</th>
+        <th></th>
       </tr> 
       <tr ng-repeat="country in countries">
         <td>{{country.alphabet}}</td>
