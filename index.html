@@ -10,17 +10,20 @@
         http.get('alpha.json').success(function(data) {
           scope.countries = data;
         });
-        temp = "";
+        scope.temp = "";
         scope.myFunc = function() {
+          scope.temp = "";
           for (var i = 0; i < scope.name.length; i++)
             {
                 var c = scope.name.charAt(i);
                 console.log(scope.getValue(c));
-              temp = temp + scope.getValue(c);
+                scope.temp = scope.temp + scope.getValue(c);
                 //scope.callSign = scope.getValue(c);
             }
-          scope.callSign = temp;
         };
+        scope.display=function(){
+          scope.callSign = scope.temp;
+        }
         scope.getValue = function(c) {
           for(var i=0;i<scope.countries.length;i++){
             if(scope.countries[i].alphabet==c.toUpperCase()){
@@ -35,7 +38,7 @@
     <table>
       <tr>
         <th>Enter Name:</th>
-        <th><input ng-model="name" ng-change="myFunc()" type="text"/></th>
+        <th><input ng-model="name" ng-change="myFunc();display()" type="text"/></th>
       </tr>
       <tr>
         {{callSign}}
