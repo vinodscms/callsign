@@ -16,13 +16,13 @@
           for (var i = 0; i < scope.name.length; i++)
             {
                 var c = scope.name.charAt(i);
-                //console.log(scope.countries[i]);
                 console.log(scope.getValue(c));
+              scope.callSign = scope.getValue(c);
             }
         };
         scope.getValue = function(c) {
           for(var i=0;i<scope.countries.length;i++){
-            if(scope.countries[i].alphabet==c){
+            if(scope.countries[i].alphabet==c.toUpperCase()){
               return scope.countries[i].value;
                }
           }
@@ -37,8 +37,7 @@
         <th><input ng-model="name" ng-change="myFunc()" type="text"/></th>
       </tr>
       <tr>
-        <th>{{count}}</th>
-        <th></th>
+        {{callSign}}
       </tr> 
       <tr ng-repeat="country in countries">
         <td>{{country.alphabet}}</td>
